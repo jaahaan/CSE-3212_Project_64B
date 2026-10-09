@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -55,14 +54,50 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Text(
-        "Welcome to homepage",
-        style: GoogleFonts.lobster(
-          textStyle: TextStyle(
-            fontSize: 30,
-            color: const Color.fromARGB(255, 164, 103, 124),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color.fromARGB(255, 164, 103, 124),
+        foregroundColor: Colors.white,
+        hoverColor: Colors.amber,
+        tooltip: "Write",
+        shape: CircleBorder(),
+        child: Icon(Icons.add),
+      ),
+      body: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 20, 10, 0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                side: BorderSide(),
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                shadowColor: Colors.amber,
+                elevation: 10,
+                fixedSize: Size(100, 50),
+              ),
+              child: Text("Blue"),
+            ),
           ),
-        ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
+            ),
+            child: Text("Green"),
+          ),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(
+              backgroundColor: Colors.pink,
+              foregroundColor: Colors.white,
+            ),
+            child: Text("Pink"),
+          ),
+        ],
       ),
     );
   }
